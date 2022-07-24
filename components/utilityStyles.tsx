@@ -29,7 +29,7 @@ export const ProgressCircleWrapper = styled.div`
   
   .percentage {
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 100%;
     transform: rotate(270deg);
     

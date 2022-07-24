@@ -1,15 +1,21 @@
-import { createRef, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import DropDown from "./dropdown";
 import {
   MdKeyboardArrowDown,
   MdKeyboardArrowRight,
   MdKeyboardArrowUp,
 } from "react-icons/md";
+import { DropDownWrapper } from "./FormStyles";
 
-const MonthlyOption = () => {
-  const [plan, setPlan] = useState("Select Plan");
+interface Iprops {
+  monthlyPlan?:string;
+  handleChange: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const MonthlyOption = ({monthlyPlan, handleChange}:Iprops) => {
+  const [plan, setPlan] = useState("Select-plan");
   const [showDropDown, setShowDropDown] = useState(false);
-  const dropdownRef = createRef<HTMLDivElement>();
+  const dropdownRef = useRef<HTMLDivElement| null>(null);
 
   useEffect(() => {
     const handleClickOutside = (e: any) => {
@@ -22,21 +28,18 @@ const MonthlyOption = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [dropdownRef]);
 
-  useEffect(() => {
-    if (dropdownRef.current !== null) {
-      // dropdownRef.current.textContent = plan;
-      console.log(plan);
-    }
-  }, [plan, dropdownRef]);
+
 
   return (
-    <div>
+    <DropDownWrapper>
+      <p className="text">Choose a monthly plan</p>
       <div
         className="current-plan"
         onClick={() => setShowDropDown(!showDropDown)}
         ref={dropdownRef}
       >
-        {plan}
+       
+      {monthlyPlan && monthlyPlan?.length > 0 ? monthlyPlan : plan}
         {showDropDown ? (
           <span>
             <MdKeyboardArrowUp />
@@ -46,13 +49,13 @@ const MonthlyOption = () => {
             <MdKeyboardArrowDown />
           </span>
         )}
-      </div>
       {showDropDown && (
         <div className="drop-down">
-          <DropDown setPlan={setPlan} setShowDropDown={setShowDropDown} />
+          <DropDown handleChange={handleChange} setShowDropDown={setShowDropDown} />
         </div>
       )}
-    </div>
+      </div>
+    </DropDownWrapper>
   );
 };
 
