@@ -3,19 +3,21 @@ import Button from "./Button";
 import { RentOptionWrapper } from "./FormStyles";
 import DataHooks from "../../../hooks/data";
 
-const AccomodationStatus = () => {
+interface IProps {
+  accomodationStatus :string
+  handleChange: React.MouseEventHandler<HTMLButtonElement>
+}
+
+const AccomodationStatus = ({accomodationStatus, handleChange}: IProps) => {
   const { rentOptions } = DataHooks();
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>)=>{
-    e.preventDefault();
-  }
   return (
     <RentOptionWrapper>
       <p className="text">What's your accomodation status?</p>
       <div className="rent-option">
         {rentOptions.map((option, index) => (
           <div key={index}>
-            <Button option={option} handleClick={handleClick} />
+            <Button option={option} handleClick={handleChange} />
           </div>
         ))}
       </div>

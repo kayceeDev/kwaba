@@ -5,20 +5,20 @@ export const ButtonWrapper = styled.button`
   border: 2px solid #f2f2f2;
   background-color: #fff;
   width: 100%;
-  height:1.5rem ;
+  min-height: 1.5rem;
   max-width: 100%;
-  padding: 2rem 5rem;
+  padding: 2rem 0rem;
   cursor: pointer;
-  display:flex ;
-  align-items:center ;
-  justify-content:center ;
-  border-radius:0.5rem ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
 
   &:focus {
-    border: 2px solid #9792EB;
-    color:#9792EB;
-    opacity:1;
-    font-weight:500 ;
+    border: 2px solid #9792eb;
+    color: #9792eb;
+    opacity: 1;
+    font-weight: 500;
   }
 `;
 
@@ -27,18 +27,21 @@ export const RentOptionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
-    opacity:0.6 ;
+    opacity: 0.6;
   }
 `;
 
-export const InputWrapper = styled.div`
+interface Props {
+  approve?: string;
+}
+export const InputWrapper = styled.div<Props>`
   /* input.tsx */
   .input {
     width: 100%;
     height: 2rem;
-    padding:1.5rem 0 1.5rem 1rem;
-    display:flex ;
-    align-items:center ;
+    padding: 1.5rem 0 1.5rem 1rem;
+    display: flex;
+    align-items: center;
     border: 2px solid #f2f2f2;
     border-radius: 0.5rem;
     /* border: none; */
@@ -59,13 +62,16 @@ export const InputWrapper = styled.div`
 
   .input:valid:not(:placeholder-shown) ~ .valid {
     color: green;
-    font-weight:800;
-    display:block ;
+    font-weight: 800;
+    display: block;
   }
 
   .input:focus {
     outline: none;
-    border: 2px solid #9792EB;
+    border: ${(props) =>
+      props.approve ? "2px solid #f2f2f2" : "2px solid #9792EB"};
+    box-shadow: ${(props) =>
+      props.approve ? "2px 6px 4px #f2f2f2" : "2px solid #9792EB"};
   }
 
   .input:valid:not(:focus):not(:placeholder-shown) {
@@ -82,5 +88,50 @@ export const InputWrapper = styled.div`
 
   .input:invalid:not(:placeholder-shown) {
     border: 2px solid #900;
+  }
+`;
+
+// Drop dowm
+export const DropDownWrapper = styled.div`
+  position: relative;
+
+  .current-plan {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    border: 2px solid #f2f2f2;
+    border-radius: 0.6rem;
+    opacity: 0.6;
+  }
+
+  .drop-down {
+    position: absolute;
+    top:5rem;
+    opacity:1 ;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    z-index: 100;
+    width: 70%;
+    overflow: hidden;
+    height: 6rem;
+    overflow-y: auto;
+  }
+
+  .drop-down-item {
+    border-bottom: 2px solid #f2f2f2;
+    padding: 0.6rem 0 0.6rem 1rem;
+    opacity:1 ;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    background-color:none;
+    width: 100%;
+    :hover {
+      background-color: var(--secondary-color);
+      color: #f9fefc;
+    }
   }
 `;

@@ -6,27 +6,22 @@ interface monthlyOptions {
 }
 
 interface IProps {
-  handleChange? : (args0: string) => void;
-  setPlan :  React.Dispatch<React.SetStateAction<string>>;
+  handleChange: React.MouseEventHandler<HTMLButtonElement>
   setShowDropDown :  React.Dispatch<React.SetStateAction<boolean>>;
 }
-const DropDown= ({setPlan, setShowDropDown }: IProps) => {
+const DropDown= ({handleChange, setShowDropDown }: IProps) => {
   const { MONTHLYOPTIONS } = DataHooks();
   
 
   return <>
   {MONTHLYOPTIONS.map(({ id, text }:monthlyOptions) => (
-    <div
+    <button className="drop-down-item"
       key={id}
-      onClick={() => {
-        
-        setPlan(text);
-        setShowDropDown(false);
-        
-      }}
-    >
-      {text}
-    </div>
+      name="monthlyPlan"
+      value={text}
+      onClick={handleChange}>
+      { text}
+    </button>
   ))}
   </>
 };

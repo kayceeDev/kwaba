@@ -7,7 +7,7 @@ interface IOption {
 const Button = ({ option, handleClick }:IOption) => {
   
   return (
-    <ButtonWrapper value={option} onClick={handleClick}>
+    <ButtonWrapper value={option} name="accomodationStatus" onClick={handleClick}>
         {option}
     </ButtonWrapper>
   )
