@@ -24,7 +24,7 @@ const MonthlyOption = () => {
 
   useEffect(() => {
     if (dropdownRef.current !== null) {
-      dropdownRef.current.textContent = plan;
+      // dropdownRef.current.textContent = plan;
       console.log(plan);
     }
   }, [plan, dropdownRef]);
@@ -52,9 +52,6 @@ const MonthlyOption = () => {
           <DropDown setPlan={setPlan} setShowDropDown={setShowDropDown} />
         </div>
       )}
-      <div className="next">
-        
-      </div>
     </div>
   );
 };

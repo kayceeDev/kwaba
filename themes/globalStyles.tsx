@@ -74,7 +74,19 @@ input[type=number] {
 /* ------------------- */
 /* Utility classes     */
 /* ------------------- */
+.green {
+  background: #25DC98;
+}
 
+.purple {
+    background: var(--kwaba-purple);
+}
+
+.text{
+  color:#6B7D89;
+  line-height:1.5rem ;
+  font-weight:600 ;
+}
 
 
 `;

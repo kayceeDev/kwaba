@@ -480,6 +480,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-icons@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/react-icons@npm:3.0.0"
+  dependencies:
+    react-icons: "*"
+  checksum: 885a9e9d43fd5543c3405b75b7d4f910492bd3bf2a2aa0a6784c6566fc3a9804bd0f6b0678779b4a15df642c35db0069a1d3f3f2c548bfc8414d5abe1fcc6469
+  languageName: node
+  linkType: hard
+
 "@types/react@npm:*, @types/react@npm:18.0.15":
   version: 18.0.15
   resolution: "@types/react@npm:18.0.15"
@@ -1950,6 +1959,7 @@ __metadata:
     "@types/node": 18.0.6
     "@types/react": 18.0.15
     "@types/react-dom": 18.0.6
+    "@types/react-icons": ^3.0.0
     "@types/styled-components": ^5.1.25
     D: ^1.0.0
     axios: ^0.27.2
@@ -1959,6 +1969,7 @@ __metadata:
     next: 12.2.3
     react: 18.2.0
     react-dom: 18.2.0
+    react-icons: ^4.4.0
     react-is: ^18.2.0
     react-redux: ^8.0.2
     styled-components: ^5.3.5
@@ -2441,6 +2452,15 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:*, react-icons@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "react-icons@npm:4.4.0"
+  peerDependencies:
+    react: "*"
+  checksum: dd93a1dcc8ac8a3cf46a2b33e80b586fa967331fa5fcb90d061abf276155a8363a331643e203d67cb9bab4261d00a757da854bcce1fce2c6e4258bf3e33f711b
   languageName: node
   linkType: hard
 

@@ -5,13 +5,17 @@ import DataHooks from "../../../hooks/data";
 
 const AccomodationStatus = () => {
   const { rentOptions } = DataHooks();
+
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>)=>{
+    e.preventDefault();
+  }
   return (
     <RentOptionWrapper>
-      <p>What's your accomodation status?</p>
+      <p className="text">What's your accomodation status?</p>
       <div className="rent-option">
         {rentOptions.map((option, index) => (
           <div key={index}>
-            <Button option={option} />
+            <Button option={option} handleClick={handleClick} />
           </div>
         ))}
       </div>

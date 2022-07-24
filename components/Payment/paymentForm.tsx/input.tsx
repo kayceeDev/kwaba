@@ -6,18 +6,17 @@ interface Iprops {
 const InputComponent = ({ label }: Iprops) => {
   return (
     <InputWrapper>
-      <div>{label}</div>
+      <div className="text">{label}</div>
       <input
-        type="number"
+        type="text"
         className="input"
         name="amount"
         id="amount"
-        min="0"
-        step="1"
+       pattern="^[1-9]+[0-9]*$"
         placeholder="Amount"
       />
       <div className="valid">✓</div>
-      <div className="requirements">amount should be a number</div>
+      <div className="requirements">Amount should be a number</div>
     </InputWrapper>
   );
 };

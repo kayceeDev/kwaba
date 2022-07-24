@@ -2,16 +2,23 @@ import styled from "styled-components";
 
 export const ButtonWrapper = styled.button`
   outline: none;
-  border: 1px solid grey;
+  border: 2px solid #f2f2f2;
   background-color: #fff;
   width: 100%;
+  height:1.5rem ;
   max-width: 100%;
   padding: 2rem 5rem;
   cursor: pointer;
-  opacity: 0.7;
+  display:flex ;
+  align-items:center ;
+  justify-content:center ;
+  border-radius:0.5rem ;
 
-  :focus {
-    border: 1px solid purple;
+  &:focus {
+    border: 2px solid #9792EB;
+    color:#9792EB;
+    opacity:1;
+    font-weight:500 ;
   }
 `;
 
@@ -20,6 +27,7 @@ export const RentOptionWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    opacity:0.6 ;
   }
 `;
 
@@ -27,15 +35,12 @@ export const InputWrapper = styled.div`
   /* input.tsx */
   .input {
     width: 100%;
-    height: 100%;
-  }
-
-  .input {
-    width: 100%;
-    height: 3rem;
-    padding: 0.5rem;
-    border: 1px solid #333333;
-    border-radius: 0.25rem;
+    height: 2rem;
+    padding:1.5rem 0 1.5rem 1rem;
+    display:flex ;
+    align-items:center ;
+    border: 2px solid #f2f2f2;
+    border-radius: 0.5rem;
     /* border: none; */
   }
 
@@ -60,7 +65,7 @@ export const InputWrapper = styled.div`
 
   .input:focus {
     outline: none;
-    border: 2px solid purple;
+    border: 2px solid #9792EB;
   }
 
   .input:valid:not(:focus):not(:placeholder-shown) {
