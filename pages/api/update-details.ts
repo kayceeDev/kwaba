@@ -17,12 +17,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     !monthlyPlan ||
     !monthlyPayment
   ) {
-    res.status(400).json({ message: "Some fields are missing" });
+    res.status(400).json({ error: "Some fields are missing" });
     return;
   }
 
   res.status(200).json({
-    message: "Details has been successfully Approved",
+    error: "Details has been successfully Approved",
     data: {
       accomodationStatus,
       requestAmount,

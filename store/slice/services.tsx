@@ -1,14 +1,30 @@
 import axios from 'axios';
 import getAxiosInstance from '../../services/axios';
 
-const API_URL = 'api/v1/user/'
-const API_AUTH = 'api/v1/auth/'
+interface userDetails{
+  accomodationStatus: string
+  requestAmount: string;
+  earningAmount: string;
+  monthlyPlan: string;
+}
 
-// register user
-const signup = async (userDetails) => {
-  const response = await getAxiosInstance().post(`${ API_AUTH }add`, userDetails);
-//   if (response.data) {
-//     localStorage.setItem('UserData', JSON.stringify(response.data));
-//   }
+
+// register details
+const payment = async (userDetails: userDetails) => {
+  const response = await axios.post(`api/payment`, userDetails);
   return response.data;
 };
+
+// Update details
+const updatePayment = async (userDetails: userDetails) => {
+  const response = await axios.post(`api/update-pyment`, userDetails);
+  return response.data;
+};
+
+
+const services = {
+  payment,
+  updatePayment
+}
+
+export default services

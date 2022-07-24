@@ -14,7 +14,6 @@ const InputComponent = ({
   handleChange,
   name,
 }: Iprops) => {
-  console.log(name)
   return (
     <InputWrapper approve={approve}>
       <div className="text">{label}</div>

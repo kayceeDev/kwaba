@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@reduxjs/toolkit", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:1.8.3"],\
             ["@types/node", "npm:18.0.6"],\
+            ["@types/numeral", "npm:2.0.2"],\
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-icons", "npm:3.0.0"],\
@@ -45,6 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:12.2.3"],\
             ["install-peers", "npm:1.0.4"],\
             ["next", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:12.2.3"],\
+            ["numeral", "npm:2.0.6"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:18.2.0"],\
             ["react-icons", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:4.4.0"],\
@@ -599,6 +601,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-18.0.6-1bdee507ca-780f8885a6.zip/node_modules/@types/node/",\
           "packageDependencies": [\
             ["@types/node", "npm:18.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/numeral", [\
+        ["npm:2.0.2", {\
+          "packageLocation": "./.yarn/cache/@types-numeral-npm-2.0.2-9d4395fc9c-d8b778ef5d.zip/node_modules/@types/numeral/",\
+          "packageDependencies": [\
+            ["@types/numeral", "npm:2.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2477,6 +2488,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["kwaba", "workspace:."],\
             ["@reduxjs/toolkit", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:1.8.3"],\
             ["@types/node", "npm:18.0.6"],\
+            ["@types/numeral", "npm:2.0.2"],\
             ["@types/react", "npm:18.0.15"],\
             ["@types/react-dom", "npm:18.0.6"],\
             ["@types/react-icons", "npm:3.0.0"],\
@@ -2487,6 +2499,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-next", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:12.2.3"],\
             ["install-peers", "npm:1.0.4"],\
             ["next", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:12.2.3"],\
+            ["numeral", "npm:2.0.6"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:18.2.0"],\
             ["react-icons", "virtual:e9e016f3253d11b8ca4b84ae5a3bae4a0743029d1daf197ce7b845912cba764f3f2f1d8323cd36bb7b9e233124c34b3667265d9f8183e0bb7f9ab4635f823023#npm:4.4.0"],\
@@ -2739,6 +2752,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-dom",\
             "react",\
             "sass"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["numeral", [\
+        ["npm:2.0.6", {\
+          "packageLocation": "./.yarn/cache/numeral-npm-2.0.6-2c27ceaa3c-89f0111165.zip/node_modules/numeral/",\
+          "packageDependencies": [\
+            ["numeral", "npm:2.0.6"]\
           ],\
           "linkType": "HARD"\
         }]\
