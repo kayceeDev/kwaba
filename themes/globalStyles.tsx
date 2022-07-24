@@ -2,6 +2,11 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
+:root{
+  --primary-color: #1D1567;
+  --secondary-color:#25DC98
+}
+
 /* Box sizing */
 *,
 *::before,
@@ -79,7 +84,7 @@ input[type=number] {
 }
 
 .purple {
-    background: var(--kwaba-purple);
+    background: var(--primary-color);
 }
 
 .text{
@@ -89,6 +94,18 @@ input[type=number] {
 }
 
 
+.primary-color{
+color : var(--primary-color);
+}
+
+.header {
+  height:2rem ;
+  padding:2rem 0 2rem 0 ;
+  margin:0 auto ;
+width: 45%;
+  color:#6B7D89;
+  font-size:1.2rem ;
+}
 `;
 
 export default GlobalStyle;
