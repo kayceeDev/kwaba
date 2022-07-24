@@ -32,21 +32,21 @@ const paymentSlice = createSlice({
   initialState: inititalstate,
   reducers: {
     changeRentAmount: (state, { payload }) => {
-      state.userDetails.requestAmount = payload.requestAmount
-      if (state.userDetails.requestAmount && state.userDetails.monthlyPlan){
-
+      state.userDetails.requestAmount = payload.requestAmount;
+      if (state.userDetails.requestAmount && state.userDetails.monthlyPlan) {
         state.userDetails.monthlyPayment =
-          parseInt(state.userDetails.requestAmount) / parseInt(state.userDetails.monthlyPlan.split(" ")[0]) +
+          parseInt(state.userDetails.requestAmount) /
+            parseInt(state.userDetails.monthlyPlan.split(" ")[0]) +
           parseInt(state.userDetails.requestAmount) * 0.02;
       }
     },
     changeMonthlyPlan: (state, { payload }) => {
-      if (state.userDetails.requestAmount && state.userDetails.monthlyPlan){
-
+      if (state.userDetails.requestAmount && state.userDetails.monthlyPlan) {
         state.userDetails.monthlyPlan = payload.monthlyPlan;
-        state.monthlyPayment =
-          parseInt(state.rentAmount) / parseInt(state.monthlyPlan.split(" ")[0]) +
-          parseInt(state.rentAmount) * 0.02;
+        state.userDetails.monthlyPayment =
+          parseInt(state.userDetails.requestAmount) /
+            parseInt(state?.userDetails?.monthlyPlan.split(" ")[0]) +
+          parseInt(state.userDetails.requestAmount) * 0.02;
       }
     },
     reset: (state) => {
@@ -91,7 +91,7 @@ const paymentSlice = createSlice({
   },
 });
 
-export const { reset } = paymentSlice.actions;
+export const { reset,changeRentAmount,changeMonthlyPlan } = paymentSlice.actions;
 
 export const payment = (state: RootState) => state.payment;
 

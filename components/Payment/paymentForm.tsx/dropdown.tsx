@@ -6,7 +6,7 @@ interface monthlyOptions {
 }
 
 interface IProps {
-  handleChange: React.MouseEventHandler<HTMLButtonElement>
+  handleChange:React.MouseEventHandler<HTMLButtonElement>
   setShowDropDown :  React.Dispatch<React.SetStateAction<boolean>>;
 }
 const DropDown= ({handleChange, setShowDropDown }: IProps) => {

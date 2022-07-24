@@ -5,22 +5,23 @@ import PageLayout from "../../components/layouts/layout"
 import InputComponent from "../../components/Payment/paymentForm.tsx/input"
 import MonthlyOption from "../../components/Payment/paymentForm.tsx/monthlyOption"
 import { useAppDispatch, useAppSelector } from "../../hooks/setup"
-import { payment } from "../../store/slice/paymentSlice"
+import { changeMonthlyPlan, changeRentAmount, payment } from "../../store/slice/paymentSlice"
 
 const Approval = () => {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const {
- userDetails
+ userDetails,
+ isLoaded
   } = useAppSelector(payment);
 
 
-  const onChangeInput = (e) => {
+  const handleInputChange = (e:any) => {
     dispatch(changeRentAmount({ rentAmount: e.target.value }));
   };
 
-  const updateMonthly = (plan) => {
-    dispatch(changeMonthlyPlan({ monthlyPlan: plan }));
+  const handleChange = (e:any) => {
+    dispatch(changeMonthlyPlan({ monthlyPlan: e.target.value }));
   };
 
     return (
@@ -30,11 +31,11 @@ const Approval = () => {
         label="How much is your rent request amount?"
         name="requestAmount"
         amount={userDetails.requestAmount}
-        handleChange={handleChange}
+        handleChange={handleInputChange}
       />
-            <MonthlyOption/>
+            <MonthlyOption type="handleMonthly" handleChange={handleChange}/>
             <PaymentOption/>
-            <UtilityButton color="purple" text={true ? "loading..." : "next"} />
+            <UtilityButton color="purple" text={isLoaded ? "loading..." : "Approve"} />
 
       </PageLayout>
     )

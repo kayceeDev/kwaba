@@ -8,8 +8,9 @@ import {
 import { DropDownWrapper } from "./FormStyles";
 
 interface Iprops {
+  type?:string;
   monthlyPlan?:string;
-  handleChange: React.MouseEventHandler<HTMLButtonElement>
+  handleChange:React.MouseEventHandler<HTMLButtonElement>
 }
 
 const MonthlyOption = ({monthlyPlan, handleChange}:Iprops) => {
