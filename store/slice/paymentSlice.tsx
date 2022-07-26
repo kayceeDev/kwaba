@@ -41,13 +41,13 @@ const paymentSlice = createSlice({
       }
     },
     changeMonthlyPlan: (state, { payload }) => {
-      if (state.userDetails.requestAmount && state.userDetails.monthlyPlan) {
-        state.userDetails.monthlyPlan = payload.monthlyPlan;
-        state.userDetails.monthlyPayment =
-          parseInt(state.userDetails.requestAmount) /
-            parseInt(state?.userDetails?.monthlyPlan.split(" ")[0]) +
-          parseInt(state.userDetails.requestAmount) * 0.02;
-      }
+      // if (state.userDetails.requestAmount && state.userDetails.monthlyPlan) {
+      //   state.userDetails.monthlyPlan = payload.monthlyPlan;
+      //   state.userDetails.monthlyPayment =
+      //     parseInt(state.userDetails.requestAmount) /
+      //       parseInt(state?.userDetails?.monthlyPlan.split(" ")[0]) +
+      //     parseInt(state.userDetails.requestAmount) * 0.02;
+      // }
     },
     reset: (state) => {
       state.isLoaded = false;

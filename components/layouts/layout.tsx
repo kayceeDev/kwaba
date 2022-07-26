@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Form, FormContainer } from "../../pages/payment/styles";
+import { Form, FormContainer } from "../styles";
 import { MainContainer } from "./layoutStyles";
 
 
